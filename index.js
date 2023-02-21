@@ -103,7 +103,7 @@ If you have additional questions you can contact me at ${answers.email}. Also if
 
 This project is licensed under the ${answers.license} license.`;
 
-
+    // Create a function to write README file
     fs.writeFile('README.md', readMeFile, (err) => {
         if (err)
             console.log("error")
@@ -112,7 +112,7 @@ This project is licensed under the ${answers.license} license.`;
 })
 
 
-// // TODO: Create a function to write README file
+
 // function writeToFile(fileName, data) { 
 
 // }
