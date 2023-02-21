@@ -1,7 +1,7 @@
-# Jeremys Project
+## jeremys project
 
 
-    A readme generated with node 
+    b
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -14,23 +14,23 @@
 
 ## Installation
 
-I installed the inquirer package in order to get this to work
+d
 
 ## Usage
 
-By answering the questions I set up for myself, I am displaying this information
+e
 
 ## Contributing
 
-I was the only contributor
+f
 
 ## Tests
 
-I threw an error to make sure this was working
+c
 
 ## Questions
 
-If you have additional questions you can contact me at Geneparmigiano@gmail.com. Also if you want to check out a cool github page, find me here: https://github.com/undefined.
+If you have additional questions you can contact me at h. Also if you want to check out a cool github page you can find me here: https://github.com/undefined.
 
 ## License
 

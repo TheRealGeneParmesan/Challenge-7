@@ -56,8 +56,8 @@ const readQuestions = [{
 {
     type: 'list',
     name: 'license',
-    question: "Which license would you like to use?",
-    choices: ['MIT', 'GNU GPLv3', 'Apache 2.0', 'ISC', 'None'],
+    question: "Which license are you using?",
+    choices: ['MIT', 'Boost Software', 'Unilicense', 'Mozilla Public License 2.0', 'GNU LGPLv3', 'Apache 2.0', 'ISC', 'None'],
 },
 
 ];
@@ -69,7 +69,7 @@ inquirer.prompt(readQuestions).then((answers) => {
 
     // Here we create a read me file string that we use below to generate the README file. 
 
-    const readMeFile = `# ${answers.title}
+    const readMeFile = `## ${answers.title}
 
 
     ${answers.description}
