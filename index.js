@@ -4,65 +4,121 @@ const fs = require('fs');
 
 
 // TODO: Create an array of questions for user input
-const questions = [{
+const readQuestions = [{
     type: 'input',
-    name: 'Title',
+    name: 'title',
     question: "What is the title of your project?"
 },
 
 {
     type: 'input',
-    name: 'Description',
-    question: 'Provide a description of your project.'
+    name: 'description',
+    question: "Provide a description of your project."
 
 },
 
 {
     type: 'input',
-    name: 'TableOfContents',
-    question: 'Click to be taken to the table of contents.'
+    name: 'installation',
+    question: "What steps are needed to install your project?"
 },
 
 {
     type: 'input',
-    name: 'Installation',
-    question: 'Provide installation instructions for your project.'
+    name: 'usage',
+    question: "Provide the usage information for your project."
 },
 
 {
     type: 'input',
-    name: 'Usage',
-    question: 'Provide the usage information for your project.'
+    name: 'contributing',
+    question: "Provide the contribution guidelines for your project."
 },
 
 {
     type: 'input',
-    name: 'Contributing',
-    question: 'Provide the contribution guidelines.'
+    name: 'tests',
+    question: "How will the tests run for your project?"
 },
 
 {
     type: 'input',
-    name: 'Tests',
-    question: 'We will figure out why we need tests.'
+    name: 'github',
+    question: "What is your GitHub username?"
 },
 
 {
     type: 'input',
-    name: 'Questions',
-    question: 'What is your GitHub username? ',
-    question: 'Enter your email address? '
+    name: 'email',
+    question: "What is your email address?"
 },
 
-
+{
+    type: 'list',
+    name: 'license',
+    question: "Which license would you like to use?",
+    choices: ['MIT', 'GNU GPLv3', 'Apache 2.0', 'ISC', 'None'],
+},
 
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+inquirer.prompt(readQuestions).then((answers) => {
+    const { title, description, installation, usage, contributing, tests, github, email, license } = answers;
 
-// TODO: Create a function to initialize app
-function init() { }
+    const readMeFile = `# ${answers.title}
 
-// Function call to initialize app
-init();
+
+    ${answers.description}
+
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
+
+
+## Installation
+
+${answers.installation}
+
+## Usage
+
+${answers.usage}
+
+## Contributing
+
+${answers.contributing}
+
+## Tests
+
+${answers.tests}
+
+## Questions
+
+If you have additional questions you can contact me at ${answers.email}. Also if you want to check out a cool github page you can find me here: https://github.com/${answers.username}.
+
+## License
+
+This project is licensed under the ${answers.license} license.`;
+
+
+    fs.writeFile('README.md', readMeFile, (err) => {
+        if (err)
+            console.log("error")
+        else (console.log("yes"))
+    });
+})
+
+
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) { 
+
+// }
+
+// // TODO: Create a function to initialize app
+// function init() { }
+
+// // Function call to initialize app
+// init();
