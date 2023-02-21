@@ -62,8 +62,12 @@ const readQuestions = [{
 
 ];
 
+// The prompt takes the questions that are stored in the readQuestions array and then once the questions are answered they are passed to the callback function through the then() method. The answers are stored in the answers object.   
+
 inquirer.prompt(readQuestions).then((answers) => {
     const { title, description, installation, usage, contributing, tests, github, email, license } = answers;
+
+    // Here we create a read me file string that we use below to generate the README file. 
 
     const readMeFile = `# ${answers.title}
 
