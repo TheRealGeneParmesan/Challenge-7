@@ -1,62 +1,63 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-// TODO: Create an array of questions for user input
+// Creates an array of questions and messages for user to respond to in order to create README.
+
 const readQuestions = [{
     type: 'input',
     name: 'title',
-    question: "What is the title of your project?"
+    message: "What is the title of your project?"
 },
 
 {
     type: 'input',
     name: 'description',
-    question: "Provide a description of your project."
+    message: "Provide a description of your project."
 
 },
 
 {
     type: 'input',
     name: 'installation',
-    question: "What steps are needed to install your project?"
+    message: "What steps are needed to install your project?"
 },
 
 {
     type: 'input',
     name: 'usage',
-    question: "Provide the usage information for your project."
+    message: "Provide the usage information for your project."
 },
 
 {
     type: 'input',
     name: 'contributing',
-    question: "Provide the contribution guidelines for your project."
+    message: "Provide the contribution guidelines for your project."
 },
 
 {
     type: 'input',
     name: 'tests',
-    question: "How will the tests run for your project?"
+    message: "How will the tests run for your project?"
 },
 
 {
     type: 'input',
-    name: 'github',
-    question: "What is your GitHub username?"
+    name: 'username',
+    message: "What is your GitHub username?"
 },
 
 {
     type: 'input',
     name: 'email',
-    question: "What is your email address?"
+    message: "What is your email address?"
 },
 
 {
     type: 'list',
     name: 'license',
-    question: "Which license are you using?",
+    message: "Which license are you using?",
     choices: ['MIT', 'Boost Software', 'Unilicense', 'Mozilla Public License 2.0', 'GNU LGPLv3', 'Apache 2.0', 'ISC', 'None'],
 },
 
