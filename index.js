@@ -64,7 +64,7 @@ const readQuestions = [{
 
 ];
 
-// The prompt takes the questions that are stored in the readQuestions array and then once the questions are answered they are passed to the callback function through the then() method. The answers are stored in the answers object.   
+// The prompt takes the questions that are stored in the readQuestions array and then once the questions are answered they are passed to the .then promise. The answers are stored in the answers object.   
 
 function init() {
     inquirer.prompt(readQuestions).then((answers) => {
@@ -122,8 +122,6 @@ This project is licensed under the ${license} license.`;
 }
 
 
-
-// function writeToFile(fileName, data) { 
 
 // // Function call to initialize app
 init();
