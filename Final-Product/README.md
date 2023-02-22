@@ -1,7 +1,7 @@
-## Jeremy's Project
+## J
 
 
-    Using Node to create a README 
+    B
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -14,24 +14,24 @@
 
 ## Installation
 
-Installing Inquirer package and Node
+D
 
 ## Usage
 
-Use at your pleasure
+C
 
 ## Contributing
 
-No contribution guidelines
+E
 
 ## Tests
 
-Well
+F
 
 ## Questions
 
-If you have additional questions you can contact me at Geneparmigiano@gmail.com. Also if you want to check out a cool github page you can find me here: https://github.com/TheRealGeneParmesan.
+If you have additional questions you can contact me at H. Also if you want to check out a cool github page you can find me here: https://github.com/G.
 
 ## License
-
-This project is licensed under the None license.
+![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
+This project is licensed under the MIT license.

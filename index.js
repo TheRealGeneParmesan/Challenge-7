@@ -59,7 +59,7 @@ const readQuestions = [{
     type: 'list',
     name: 'license',
     message: "Which license are you using?",
-    choices: ['MIT', 'Boost Software', 'Unilicense', 'Mozilla Public License 2.0', 'GNU LGPLv3', 'Apache 2.0', 'ISC', 'None'],
+    choices: ['MIT', 'GNU LGPLv3', 'Apache 2.0', 'None'],
 },
 
 ];
@@ -107,6 +107,8 @@ ${tests}
 If you have additional questions you can contact me at ${email}. Also if you want to check out a cool github page you can find me here: https://github.com/${username}.
 
 ## License
+
+${renderLicenseBadge(license)}
 
 This project is licensed under the ${license} license.`;
 
