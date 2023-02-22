@@ -1,9 +1,9 @@
 ## Jeremy's README
 
-
     A README created with Node.js.
 
-## Table of Contents 
+## Table of Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -11,14 +11,13 @@
 - [Questions](#questions)
 - [License](#license)
 
-
 ## Installation
 
 You must install the inquirer package and node.js for this project to work.
 
 ## Usage
 
-When I need a README for my projects, I can easily creat one with node.
+When I need a README for my projects, I can easily create one with node.
 
 ## Contributing
 
@@ -26,7 +25,7 @@ I am the person contributing to this project.
 
 ## Tests
 
-I threw an error to ensure that the outcome would be successful. 
+I threw an error to ensure that the outcome would be successful.
 
 ## Questions
 
