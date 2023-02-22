@@ -113,7 +113,7 @@ ${renderLicenseBadge(license)}
 This project is licensed under the ${license} license.`;
 
         // Create a function to write README file
-        fs.writeFile('./Final-Product/README.md', readMeFile, (err) => {
+        fs.writeFile('README.md', readMeFile, (err) => {
             if (err)
                 console.log("error")
             else (console.log("success"))
