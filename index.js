@@ -1,9 +1,10 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { renderLicenseBadge, renderLicenseLink, renderLicenseSection } = require('./utils/generateMarkdown')
 
 
-// Creates an array of questions and messages for user to respond to in order to create README.
+// Creates an array of prompts for user to respond to in order to create README.
 
 const readQuestions = [{
     type: 'input',
@@ -65,15 +66,16 @@ const readQuestions = [{
 
 // The prompt takes the questions that are stored in the readQuestions array and then once the questions are answered they are passed to the callback function through the then() method. The answers are stored in the answers object.   
 
-inquirer.prompt(readQuestions).then((answers) => {
-    const { title, description, installation, usage, contributing, tests, github, email, license } = answers;
+function init() {
+    inquirer.prompt(readQuestions).then((answers) => {
+        const { title, description, installation, usage, contributing, tests, username, email, license } = answers;
 
-    // Here we create a read me file string that we use below to generate the README file. 
+        // Here we create a read me file string that we use below to generate the README file. 
 
-    const readMeFile = `## ${answers.title}
+        const readMeFile = `## ${title}
 
 
-    ${answers.description}
+    ${description}
 
 ## Table of Contents 
 - [Installation](#installation)
@@ -86,44 +88,40 @@ inquirer.prompt(readQuestions).then((answers) => {
 
 ## Installation
 
-${answers.installation}
+${installation}
 
 ## Usage
 
-${answers.usage}
+${usage}
 
 ## Contributing
 
-${answers.contributing}
+${contributing}
 
 ## Tests
 
-${answers.tests}
+${tests}
 
 ## Questions
 
-If you have additional questions you can contact me at ${answers.email}. Also if you want to check out a cool github page you can find me here: https://github.com/${answers.username}.
+If you have additional questions you can contact me at ${email}. Also if you want to check out a cool github page you can find me here: https://github.com/${username}.
 
 ## License
 
-This project is licensed under the ${answers.license} license.`;
+This project is licensed under the ${license} license.`;
 
-    // Create a function to write README file
-    fs.writeFile('README.md', readMeFile, (err) => {
-        if (err)
-            console.log("error")
-        else (console.log("yes"))
-    });
-})
+        // Create a function to write README file
+        fs.writeFile('./Final-Product/README.md', readMeFile, (err) => {
+            if (err)
+                console.log("error")
+            else (console.log("success"))
+        });
+    })
+}
 
 
 
 // function writeToFile(fileName, data) { 
 
-// }
-
-// // TODO: Create a function to initialize app
-// function init() { }
-
 // // Function call to initialize app
-// init();
+init();
