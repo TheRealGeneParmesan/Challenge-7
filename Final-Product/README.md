@@ -1,6 +1,5 @@
 ## Jeremy's README
 
-[JeremyREADME.webm](https://user-images.githubusercontent.com/119083185/220776578-24c76f90-142d-4ca5-ac25-0d7f0d67b9e8.webm)
 
     A README created with Node.js.
 
@@ -20,6 +19,8 @@ You must install the inquirer package and node.js for this project to work.
 ## Usage
 
 When I need a README for my projects, I can easily create one with Node.
+
+[JeremyREADME.webm](https://user-images.githubusercontent.com/119083185/220776578-24c76f90-142d-4ca5-ac25-0d7f0d67b9e8.webm)
 
 ## Contributing
 
